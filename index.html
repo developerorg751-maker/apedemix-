@@ -1,0 +1,1501 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Apedemix — Websites, Apps, Web Tools &amp; AI Products</title>
+  <meta name="description" content="Apedemix is a developer-led tech brand building useful websites, apps, web tools and AI products. Co-founded by Aadarsh Yadav. Let's build something useful." />
+  <meta name="keywords" content="Apedemix, web development, website development, app development, web tools, AI products, Aadarsh Yadav, co-founder, entrepreneur" />
+  <meta name="author" content="Aadarsh Yadav" />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+  <link rel="canonical" href="https://apedemix.vercel.app/" />
+  <meta name="theme-color" content="#05070d" />
+  <meta name="color-scheme" content="dark" />
+  <meta name="application-name" content="Apedemix" />
+  <meta name="apple-mobile-web-app-title" content="Apedemix" />
+
+  <!-- Favicon / logo: keep favicon.ico in the same folder as this file -->
+  <link rel="icon" href="favicon.ico" sizes="any" />
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+  <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+
+  <!-- Open Graph (Facebook, WhatsApp, LinkedIn) -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://apedemix.vercel.app/" />
+  <meta property="og:site_name" content="Apedemix" />
+  <meta property="og:title" content="Apedemix — Websites, Apps, Web Tools & AI Products" />
+  <meta property="og:description" content="Apedemix is a developer-led tech brand building useful websites, apps, web tools and AI products. Co-founded by Aadarsh Yadav. Let's build something useful." />
+
+  <!-- Twitter / X -->
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Apedemix — Websites, Apps, Web Tools & AI Products" />
+  <meta name="twitter:description" content="Apedemix is a developer-led tech brand building useful websites, apps, web tools and AI products. Co-founded by Aadarsh Yadav. Let's build something useful." />
+
+  <!-- Faster font loading -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" />
+
+  <!-- Structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://apedemix.vercel.app/#organization",
+        "name": "Apedemix",
+        "slogan": "Build. Innovate. Empower.",
+        "description": "Apedemix is a developer-led tech brand building useful websites, apps, web tools and AI products. Co-founded by Aadarsh Yadav. Let's build something useful.",
+        "email": "developer.org751@gmail.com",
+        "telephone": "+918318053995",
+        "founder": {
+          "@id": "https://apedemix.vercel.app/#founder"
+        },
+        "knowsAbout": [
+          "Web development",
+          "App development",
+          "Web tools",
+          "AI products",
+          "Entrepreneurship"
+        ],
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "contactType": "customer service",
+          "email": "developer.org751@gmail.com",
+          "telephone": "+918318053995"
+        },
+        "url": "https://apedemix.vercel.app/"
+      },
+      {
+        "@type": "Person",
+        "@id": "https://apedemix.vercel.app/#founder",
+        "name": "Aadarsh Yadav",
+        "jobTitle": "Co-founder",
+        "worksFor": {
+          "@id": "https://apedemix.vercel.app/#organization"
+        }
+      },
+      {
+        "@type": "WebSite",
+        "name": "Apedemix",
+        "description": "Apedemix is a developer-led tech brand building useful websites, apps, web tools and AI products. Co-founded by Aadarsh Yadav. Let's build something useful.",
+        "publisher": {
+          "@id": "https://apedemix.vercel.app/#organization"
+        },
+        "url": "https://apedemix.vercel.app/"
+      }
+    ]
+  }
+  </script>
+  <style>
+    :root {
+      --bg: #05070d;
+      --surface: #0b0f18;
+      --surface2: #101522;
+      --text: #f7f9ff;
+      --muted: #9ba5b8;
+      --line: #20283a;
+      --cyan: #12cfff;
+      --blue: #286cff;
+      --purple: #9a52ff;
+      --max: 1180px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Inter, system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .nav {
+      height: 76px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      max-width: var(--max);
+      margin: auto;
+      padding: 0 24px;
+      position: relative;
+      z-index: 10;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 20px;
+      font-weight: 800;
+    }
+
+    .brand-mark {
+      width: 34px;
+      height: 34px;
+      display: grid;
+      place-items: center;
+      border-radius: 10px;
+      background: linear-gradient(
+        135deg,
+        var(--cyan),
+        var(--blue),
+        var(--purple)
+      );
+      color: white;
+      font-weight: 900;
+    }
+
+    .links {
+      display: flex;
+      gap: 30px;
+      align-items: center;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .links a:hover {
+      color: white;
+    }
+
+    .nav-cta {
+      border: 1px solid var(--line);
+      padding: 10px 16px;
+      border-radius: 10px;
+      color: white !important;
+    }
+
+    .menu-btn {
+      display: none;
+      background: none;
+      border: 0;
+      color: white;
+      font-size: 24px;
+    }
+
+    .hero {
+      max-width: var(--max);
+      min-height: 650px;
+      margin: auto;
+      padding: 80px 24px 70px;
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      align-items: center;
+      position: relative;
+    }
+
+    .hero-copy {
+      position: relative;
+      z-index: 2;
+    }
+
+    .eyebrow {
+      font-size: 12px;
+      letter-spacing: 3px;
+      color: var(--cyan);
+      font-weight: 700;
+      margin-bottom: 18px;
+    }
+
+    h1 {
+      font-size: clamp(48px, 7vw, 82px);
+      line-height: 1.02;
+      letter-spacing: -4px;
+    }
+
+    h1 span {
+      background: linear-gradient(
+        90deg,
+        var(--cyan),
+        #fff,
+        var(--purple)
+      );
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .hero-text {
+      max-width: 650px;
+      color: var(--muted);
+      font-size: 18px;
+      margin: 25px 0 30px;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 13px 19px;
+      border-radius: 11px;
+      font-weight: 700;
+      font-size: 14px;
+      transition: 0.2s;
+    }
+
+    .primary {
+      background: linear-gradient(
+        100deg,
+        var(--blue),
+        var(--purple)
+      );
+      box-shadow: 0 10px 35px #286cff33;
+    }
+
+    .primary:hover {
+      transform: translateY(-2px);
+    }
+
+    .secondary {
+      border: 1px solid var(--line);
+      background: #ffffff05;
+    }
+
+    .secondary:hover {
+      background: #ffffff0b;
+    }
+
+    .hero-visual {
+      display: grid;
+      place-items: center;
+      min-height: 430px;
+    }
+
+    .orbit-card {
+      width: 330px;
+      height: 330px;
+      border-radius: 50%;
+      position: relative;
+      display: grid;
+      place-items: center;
+    }
+
+    .orbit-card:before,
+    .orbit-card:after {
+      content: "";
+      position: absolute;
+      border-radius: 50%;
+      inset: 30px;
+      border: 1px solid #286cff55;
+      box-shadow: 0 0 80px #286cff22;
+    }
+
+    .orbit-card:after {
+      inset: 65px;
+      border-color: #9a52ff55;
+    }
+
+    .orbit {
+      position: absolute;
+      width: 380px;
+      height: 120px;
+      border: 2px solid #12cfff88;
+      border-radius: 50%;
+      transform: rotate(-23deg);
+    }
+
+    .a-logo {
+      font-size: 150px;
+      font-weight: 900;
+      line-height: 1;
+      background: linear-gradient(
+        140deg,
+        var(--cyan),
+        var(--blue),
+        var(--purple)
+      );
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      filter: drop-shadow(0 0 35px #286cff66);
+      z-index: 2;
+    }
+    .floating-card {
+      position: absolute;
+      background: #101522dd;
+      border: 1px solid #ffffff16;
+      backdrop-filter: blur(12px);
+      padding: 9px 13px;
+      border-radius: 10px;
+      font-size: 12px;
+      font-weight: 700;
+      box-shadow: 0 15px 35px #0008;
+    }
+
+    .card-web {
+      top: 25px;
+      left: 5px;
+      color: var(--cyan);
+    }
+
+    .card-ai {
+      right: 0;
+      top: 115px;
+      color: #b47aff;
+    }
+
+    .card-app {
+      bottom: 35px;
+      left: 30px;
+      color: #6ea0ff;
+    }
+
+    .glow {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(80px);
+      opacity: 0.22;
+      pointer-events: none;
+    }
+
+    .glow-one {
+      width: 280px;
+      height: 280px;
+      background: var(--blue);
+      top: 100px;
+      right: 260px;
+    }
+
+    .glow-two {
+      width: 220px;
+      height: 220px;
+      background: var(--purple);
+      bottom: 50px;
+      left: 100px;
+    }
+
+    .stats {
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+      max-width: var(--max);
+      margin: auto;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    .stats div {
+      padding: 25px 20px;
+      border-right: 1px solid var(--line);
+    }
+
+    .stats div:last-child {
+      border-right: 0;
+    }
+
+    .stats strong {
+      display: block;
+      font-size: 12px;
+      color: var(--cyan);
+      margin-bottom: 6px;
+    }
+
+    .stats span {
+      font-size: 14px;
+      color: var(--muted);
+    }
+
+    .section {
+      max-width: var(--max);
+      margin: auto;
+      padding: 120px 24px;
+    }
+
+    .section-heading {
+      max-width: 720px;
+      margin-bottom: 45px;
+    }
+
+    .section h2 {
+      font-size: clamp(34px, 5vw, 55px);
+      line-height: 1.08;
+      letter-spacing: -2px;
+      margin-bottom: 18px;
+    }
+
+    .section-heading > p:last-child {
+      color: var(--muted);
+      font-size: 16px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+    }
+
+    .card {
+      background: linear-gradient(
+        145deg,
+        #101522,
+        #090c14
+      );
+      border: 1px solid var(--line);
+      padding: 28px;
+      border-radius: 18px;
+      min-height: 250px;
+      transition: 0.25s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      border-color: #286cff77;
+    }
+
+    .icon {
+      font-size: 30px;
+      color: var(--cyan);
+      margin-bottom: 25px;
+    }
+
+    .card h3 {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .tag {
+      display: inline-block;
+      margin-top: 20px;
+      font-size: 10px;
+      letter-spacing: 2px;
+      color: #8994aa;
+    }
+
+    .dark-section {
+      max-width: none;
+      background: #080b12;
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .dark-section > * {
+      max-width: var(--max);
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .step {
+      padding: 30px 0;
+      border-top: 1px solid var(--line);
+    }
+
+    .step span {
+      color: var(--cyan);
+      font-size: 12px;
+    }
+
+    .step h3 {
+      font-size: 24px;
+      margin: 12px 0;
+    }
+
+    .step p {
+      color: var(--muted);
+      max-width: 330px;
+    }
+    .about {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+    }
+
+    .about-copy {
+      color: var(--muted);
+      font-size: 17px;
+      padding-top: 10px;
+    }
+
+    .about-copy p + p {
+      margin-top: 20px;
+    }
+
+    .contact {
+      text-align: center;
+    }
+
+    .contact-box {
+      padding: 75px 25px;
+      border: 1px solid var(--line);
+      border-radius: 25px;
+      background:
+        radial-gradient(
+          circle at 50% 0,
+          #286cff18,
+          transparent 55%
+        ),
+        #0a0e17;
+    }
+
+    .contact-box h2 {
+      max-width: 750px;
+      margin: 0 auto 15px;
+    }
+
+    .contact-box p {
+      color: var(--muted);
+      margin-bottom: 25px;
+    }
+
+    .contact-box small {
+      display: block;
+      color: #687287;
+      font-size: 11px;
+      margin-top: 18px;
+    }
+
+    footer {
+      max-width: var(--max);
+      margin: auto;
+      padding: 35px 24px 45px;
+      display: flex;
+      gap: 25px;
+      align-items: center;
+      justify-content: space-between;
+      color: #687287;
+      font-size: 12px;
+      border-top: 1px solid var(--line);
+    }
+
+    .footer-brand {
+      color: white;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .cofounder {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+    }
+
+    .founder-card {
+      background: linear-gradient(145deg, #101522, #090c14);
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      padding: 34px;
+    }
+
+    .founder-top {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      padding-bottom: 24px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .founder-avatar {
+      width: 64px;
+      height: 64px;
+      flex-shrink: 0;
+      display: grid;
+      place-items: center;
+      border-radius: 18px;
+      background: linear-gradient(135deg, var(--cyan), var(--blue), var(--purple));
+      color: white;
+      font-size: 28px;
+      font-weight: 900;
+    }
+
+    .founder-role {
+      font-size: 11px;
+      letter-spacing: 3px;
+      color: var(--cyan);
+      font-weight: 700;
+    }
+
+    .founder-top h3 {
+      font-size: 24px;
+      line-height: 1.2;
+    }
+
+    .founder-details div {
+      display: grid;
+      grid-template-columns: 120px 1fr;
+      gap: 16px;
+      padding: 18px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .founder-details div:last-child {
+      border-bottom: 0;
+      padding-bottom: 0;
+    }
+
+    .founder-details dt {
+      font-size: 11px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #8994aa;
+      padding-top: 3px;
+    }
+
+    .founder-details dd {
+      font-size: 15px;
+      color: var(--text);
+    }
+
+    .founder-details dd {
+      overflow-wrap: anywhere;
+    }
+
+    .founder-details dd a {
+      color: var(--cyan);
+    }
+
+    .founder-details dd a:hover {
+      text-decoration: underline;
+    }
+
+    .founder-details dd.chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .chips span {
+      font-size: 12px;
+      font-weight: 600;
+      padding: 5px 12px;
+      border: 1px solid #12cfff44;
+      border-radius: 999px;
+      color: var(--cyan);
+      background: #12cfff0d;
+    }
+
+    .founder-actions,
+    .contact-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .founder-actions {
+      margin-top: 26px;
+      padding-top: 26px;
+      border-top: 1px solid var(--line);
+    }
+
+    .contact-actions {
+      justify-content: center;
+    }
+
+    .button svg {
+      width: 18px;
+      height: 18px;
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .whatsapp {
+      gap: 8px;
+      background: #25d366;
+      color: #04210f;
+      box-shadow: 0 10px 30px #25d36633;
+    }
+
+    .whatsapp:hover {
+      transform: translateY(-2px);
+    }
+
+    .button:focus-visible {
+      outline: 2px solid var(--cyan);
+      outline-offset: 3px;
+    }
+
+    /* 3D floating icons */
+    .float-scene {
+      --r: 175px;
+      position: relative;
+      height: 380px;
+      margin-top: 30px;
+      perspective: 1100px;
+    }
+
+    .float-scene::before {
+      content: "";
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      width: 340px;
+      height: 340px;
+      margin: -170px 0 0 -170px;
+      border-radius: 50%;
+      background: radial-gradient(circle, #286cff33, transparent 65%);
+      filter: blur(10px);
+    }
+
+    .float-tilt,
+    .float-stage {
+      position: absolute;
+      inset: 0;
+      transform-style: preserve-3d;
+    }
+
+    .float-tilt {
+      transform: rotateX(-16deg);
+    }
+
+    .float-stage {
+      animation: stageSpin 26s linear infinite;
+    }
+
+    .float-ring {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      width: calc(var(--r) * 2);
+      height: calc(var(--r) * 2);
+      margin: calc(var(--r) * -1) 0 0 calc(var(--r) * -1);
+      border: 1px dashed #286cff66;
+      border-radius: 50%;
+      transform: rotateX(90deg);
+    }
+
+    .cube {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      width: 100px;
+      height: 100px;
+      margin: -50px 0 0 -50px;
+      transform-style: preserve-3d;
+      animation: cubeSpin 16s linear infinite;
+    }
+
+    .cube span {
+      position: absolute;
+      inset: 0;
+      display: grid;
+      place-items: center;
+      border: 1px solid #12cfff88;
+      border-radius: 10px;
+      background: linear-gradient(140deg, #12cfff22, #286cff22, #9a52ff22);
+      box-shadow: inset 0 0 30px #286cff44;
+      color: var(--cyan);
+      font-size: 56px;
+      font-weight: 900;
+    }
+
+    .cube span:nth-child(1) { transform: translateZ(50px); }
+    .cube span:nth-child(2) { transform: rotateY(90deg) translateZ(50px); }
+    .cube span:nth-child(3) { transform: rotateY(180deg) translateZ(50px); }
+    .cube span:nth-child(4) { transform: rotateY(-90deg) translateZ(50px); }
+    .cube span:nth-child(5) { transform: rotateX(90deg) translateZ(50px); }
+    .cube span:nth-child(6) { transform: rotateX(-90deg) translateZ(50px); }
+
+    .tile {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      width: 108px;
+      height: 108px;
+      margin: -54px 0 0 -54px;
+      transform-style: preserve-3d;
+      transform: rotateY(var(--a)) translateZ(var(--r)) rotateY(calc(var(--a) * -1)) translateY(var(--y, 0px));
+      animation: bob 5s ease-in-out infinite;
+      animation-delay: var(--d, 0s);
+    }
+
+    .tile-face {
+      width: 100%;
+      height: 100%;
+      display: grid;
+      place-items: center;
+      align-content: center;
+      gap: 8px;
+      border: 1px solid #286cff55;
+      border-radius: 18px;
+      background: linear-gradient(145deg, #151c30, #0b0f18);
+      box-shadow: 0 18px 40px #000a, 0 0 28px #286cff22;
+      color: var(--c, var(--cyan));
+      animation: unspin 26s linear infinite;
+    }
+
+    .tile-face svg {
+      width: 32px;
+      height: 32px;
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 1.8;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .tile-face span {
+      color: var(--text);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.3px;
+    }
+
+    @keyframes stageSpin {
+      to { transform: rotateY(360deg); }
+    }
+
+    @keyframes unspin {
+      from { transform: rotateY(0deg) rotateX(16deg); }
+      to { transform: rotateY(-360deg) rotateX(16deg); }
+    }
+
+    @keyframes bob {
+      0%, 100% { translate: 0 -8px; }
+      50% { translate: 0 10px; }
+    }
+
+    @keyframes cubeSpin {
+      from { transform: rotateX(-20deg) rotateY(0deg); }
+      to { transform: rotateX(-20deg) rotateY(360deg); }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .float-stage,
+      .cube,
+      .tile,
+      .tile-face {
+        animation: none;
+      }
+    }
+
+    @media (max-width: 560px) {
+      .float-scene {
+        --r: 115px;
+        height: 330px;
+      }
+
+      .tile {
+        width: 96px;
+        height: 96px;
+        margin: -48px 0 0 -48px;
+      }
+
+      .tile-face span {
+        font-size: 11px;
+      }
+    }
+
+    @media (max-width: 850px) {
+      .cofounder {
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
+    }
+
+    @media (max-width: 560px) {
+      .founder-card {
+        padding: 26px 22px;
+      }
+
+      .founder-details div {
+        grid-template-columns: 1fr;
+        gap: 4px;
+      }
+    }
+
+    @media (max-width: 850px) {
+
+      .links {
+        display: none;
+        position: absolute;
+        top: 68px;
+        right: 24px;
+        left: 24px;
+        background: #0b0f18;
+        border: 1px solid var(--line);
+        padding: 18px;
+        border-radius: 14px;
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .links.open {
+        display: flex;
+      }
+
+      .menu-btn {
+        display: block;
+      }
+
+      .hero {
+        grid-template-columns: 1fr;
+        padding-top: 60px;
+      }
+
+      .hero-visual {
+        min-height: 360px;
+      }
+
+      .grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .about {
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
+
+    }
+
+    @media (max-width: 560px) {
+
+      h1 {
+        letter-spacing: -2px;
+      }
+
+      .hero {
+        padding-top: 45px;
+      }
+
+      .stats {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .stats div:nth-child(2) {
+        border-right: 0;
+      }
+
+      .stats div:nth-child(-n+2) {
+        border-bottom: 1px solid var(--line);
+      }
+
+      .grid,
+      .steps {
+        grid-template-columns: 1fr;
+      }
+
+      .section {
+        padding: 80px 20px;
+      }
+
+      .orbit-card {
+        transform: scale(0.82);
+      }
+
+      footer {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+    }
+  </style>
+</head>
+
+<body>
+
+  <header class="nav">
+    <a class="brand" href="#home" aria-label="Apedemix home">
+      <span class="brand-mark">A</span>
+      <span>Apedemix</span>
+    </a>
+
+    <button class="menu-btn" aria-label="Toggle menu">☰</button>
+
+    <nav class="links" aria-label="Main navigation">
+      <a href="#products">Products</a>
+      <a href="#services">Services</a>
+      <a href="#about">About</a>
+      <a href="#cofounder">Co-founder</a>
+      <a href="#contact" class="nav-cta">Let's Build</a>
+    </nav>
+  </header>
+
+  <main id="home">
+
+    <section class="hero">
+
+      <div class="glow glow-one"></div>
+      <div class="glow glow-two"></div>
+
+      <div class="hero-copy">
+
+        <p class="eyebrow">WEB • APPS • TOOLS • AI</p>
+
+        <h1>
+          We build technology<br />
+          <span>that is useful.</span>
+        </h1>
+
+        <p class="hero-text">
+          Apedemix is a developer-led technology brand creating modern websites,
+          apps, powerful web tools and practical AI products.
+        </p>
+
+        <div class="hero-actions">
+          <a class="button primary" href="#products">
+            Explore Apedemix
+          </a>
+
+          <a class="button secondary" href="#contact">
+            Start a project
+          </a>
+        </div>
+
+      </div>
+
+      <div class="hero-visual" aria-hidden="true">
+
+        <div class="orbit-card">
+
+          <div class="orbit"></div>
+
+          <div class="a-logo">A</div>
+
+          <div class="floating-card card-web">
+            &lt;/&gt; Web
+          </div>
+
+          <div class="floating-card card-ai">
+            ✦ AI
+          </div>
+
+          <div class="floating-card card-app">
+            ▣ Apps
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <section class="stats">
+
+      <div>
+        <strong>01</strong>
+        <span>Web Development</span>
+      </div>
+
+      <div>
+        <strong>02</strong>
+        <span>App Development</span>
+      </div>
+
+      <div>
+        <strong>03</strong>
+        <span>Web Tools</span>
+      </div>
+
+      <div>
+        <strong>04</strong>
+        <span>AI Solutions</span>
+      </div>
+
+    </section>
+
+    <section id="products" class="section">
+
+      <div class="section-heading">
+
+        <p class="eyebrow">WHAT WE BUILD</p>
+
+        <h2>
+          Digital products with a purpose.
+        </h2>
+
+        <p>
+          From small utilities to complete platforms, every Apedemix project
+          starts with a real problem worth solving.
+        </p>
+
+      </div>
+
+      <div class="grid cards">
+
+        <article class="card">
+
+          <div class="icon">⌘</div>
+
+          <h3>Websites</h3>
+
+          <p>
+            Fast, responsive and accessible websites designed for real people
+            and real use cases.
+          </p>
+
+          <span class="tag">WEB</span>
+
+        </article>
+
+        <article class="card">
+
+          <div class="icon">▣</div>
+
+          <h3>Apps</h3>
+
+          <p>
+            Useful mobile and web applications with clean interfaces and
+            reliable functionality.
+          </p>
+
+          <span class="tag">APP</span>
+
+        </article>
+
+        <article class="card">
+
+          <div class="icon">⚙</div>
+
+          <h3>Web Tools</h3>
+
+          <p>
+            Simple tools that save time, automate repetitive tasks and make
+            the web more useful.
+          </p>
+
+          <span class="tag">TOOLS</span>
+
+        </article>
+        <article class="card">
+
+          <div class="icon">✦</div>
+
+          <h3>AI Products</h3>
+
+          <p>
+            Practical AI experiences that help people create, learn, search,
+            organize and work smarter.
+          </p>
+
+          <span class="tag">AI</span>
+
+        </article>
+
+      </div>
+
+    </section>
+
+
+    <section id="services" class="section dark-section">
+
+      <div class="section-heading">
+
+        <p class="eyebrow">OUR APPROACH</p>
+
+        <h2>
+          Small ideas can become useful products.
+        </h2>
+
+      </div>
+
+
+      <div class="steps">
+
+        <div class="step">
+
+          <span>01</span>
+
+          <h3>Discover</h3>
+
+          <p>
+            Understand the problem and the people who need a solution.
+          </p>
+
+        </div>
+
+
+        <div class="step">
+
+          <span>02</span>
+
+          <h3>Build</h3>
+
+          <p>
+            Design, code and test a clean product with a strong technical
+            foundation.
+          </p>
+
+        </div>
+
+
+        <div class="step">
+
+          <span>03</span>
+
+          <h3>Launch</h3>
+
+          <p>
+            Put it on the internet, learn from users and keep improving it.
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <section id="about" class="section about">
+
+      <div>
+
+        <p class="eyebrow">ABOUT APEDEMIX</p>
+
+        <h2>
+          A developer brand built for the next generation of the web.
+        </h2>
+
+      </div>
+
+
+      <div class="about-copy">
+
+        <p>
+          Apedemix focuses on building meaningful digital products rather than
+          technology for technology's sake.
+        </p>
+
+        <p>
+          This website is designed as a starting point. As Apedemix grows,
+          this section can become the home for your real products, team,
+          story and achievements.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <section id="cofounder" class="section cofounder">
+
+      <div>
+
+        <p class="eyebrow">CO-FOUNDER</p>
+
+        <h2>
+          Meet the co-founder of Apedemix.
+        </h2>
+
+        <div class="float-scene" aria-hidden="true">
+          <div class="float-tilt">
+            <div class="float-ring"></div>
+            <div class="float-stage">
+              <div class="cube">
+                <span>A</span><span>A</span><span>A</span><span>A</span><span>A</span><span>A</span>
+              </div>
+
+          <div class="tile" style="--a:0deg; --y:-30px; --d:0s; --c:#12cfff;">
+            <div class="tile-face">
+              <svg viewBox="0 0 24 24"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+              <span>Web Dev</span>
+            </div>
+          </div>
+
+          <div class="tile" style="--a:60deg; --y:20px; --d:-1s; --c:#6ea0ff;">
+            <div class="tile-face">
+              <svg viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="3"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
+              <span>App Dev</span>
+            </div>
+          </div>
+
+          <div class="tile" style="--a:120deg; --y:-10px; --d:-2s; --c:#ffb454;">
+            <div class="tile-face">
+              <svg viewBox="0 0 24 24"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/><path d="M12 15l-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"/><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"/></svg>
+              <span>Entrepreneur</span>
+            </div>
+          </div>
+
+          <div class="tile" style="--a:180deg; --y:30px; --d:-3s; --c:#b47aff;">
+            <div class="tile-face">
+              <svg viewBox="0 0 24 24"><path d="M12 2l2.4 7.6L22 12l-7.6 2.4L12 22l-2.4-7.6L2 12l7.6-2.4z"/></svg>
+              <span>AI</span>
+            </div>
+          </div>
+
+          <div class="tile" style="--a:240deg; --y:-25px; --d:-4s; --c:#3ddc97;">
+            <div class="tile-face">
+              <svg viewBox="0 0 24 24"><polyline points="4 17 10 11 4 5"/><line x1="12" y1="19" x2="20" y2="19"/></svg>
+              <span>Web Tools</span>
+            </div>
+          </div>
+
+          <div class="tile" style="--a:300deg; --y:15px; --d:-2.5s; --c:#ffd166;">
+            <div class="tile-face">
+              <svg viewBox="0 0 24 24"><path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5"/><path d="M9 18h6"/><path d="M10 22h4"/></svg>
+              <span>Innovation</span>
+            </div>
+          </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+
+      <div class="founder-card">
+
+        <div class="founder-top">
+
+          <div class="founder-avatar">A</div>
+
+          <div>
+            <p class="founder-role">CO-FOUNDER</p>
+            <h3>Aadarsh Yadav</h3>
+          </div>
+
+        </div>
+
+        <dl class="founder-details">
+
+          <div>
+            <dt>Class</dt>
+            <dd>10th</dd>
+          </div>
+
+          <div>
+            <dt>Learning</dt>
+            <dd>Web development</dd>
+          </div>
+
+          <div>
+            <dt>Focus</dt>
+            <dd class="chips">
+              <span>Web Development</span>
+              <span>App Development</span>
+              <span>Entrepreneurship</span>
+            </dd>
+          </div>
+
+          <div>
+            <dt>Building</dt>
+            <dd>Useful websites, apps, web tools and AI products.</dd>
+          </div>
+
+          <div>
+            <dt>Founded with</dt>
+            <dd>
+              An idea to make useful websites and apps for the future
+              generation.
+            </dd>
+          </div>
+
+          <div>
+            <dt>Phone</dt>
+            <dd><a href="tel:+918318053995">+91 83180 53995</a></dd>
+          </div>
+
+          <div>
+            <dt>Email</dt>
+            <dd><a href="mailto:developer.org751@gmail.com">developer.org751@gmail.com</a></dd>
+          </div>
+
+        </dl>
+
+        <div class="founder-actions">
+          <a class="button whatsapp" href="https://wa.me/918318053995?text=Hi%20Apedemix!%20I%20would%20like%20to%20talk%20about%20a%20project." target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg>
+            WhatsApp
+          </a>
+          <a class="button secondary" href="tel:+918318053995">Call</a>
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <section id="contact" class="section contact">
+
+      <div class="contact-box">
+
+        <p class="eyebrow">HAVE AN IDEA?</p>
+
+        <h2>
+          Let's build something useful.
+        </h2>
+
+        <p>
+          Apedemix is currently building its first generation of products.
+        </p>
+
+        <div class="contact-actions">
+          <a class="button primary" href="mailto:developer.org751@gmail.com">Email Apedemix</a>
+          <a class="button whatsapp" href="https://wa.me/918318053995?text=Hi%20Apedemix!%20I%20would%20like%20to%20talk%20about%20a%20project." target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg>
+            WhatsApp
+          </a>
+          <a class="button secondary" href="tel:+918318053995">Call +91 83180 53995</a>
+        </div>
+
+        <small>
+          developer.org751@gmail.com · +91 83180 53995
+        </small>
+
+      </div>
+
+    </section>
+
+  </main>
+  <footer>
+
+    <div class="footer-brand">
+
+      <span class="brand-mark">A</span>
+
+      Apedemix
+
+    </div>
+
+    <p>
+      Build · Innovate · Empower
+    </p>
+
+    <p>
+      © 2026 Apedemix. All rights reserved.
+    </p>
+
+  </footer>
+
+
+  <script>
+    const menuButton = document.querySelector(".menu-btn");
+    const links = document.querySelector(".links");
+
+    menuButton?.addEventListener("click", () => {
+      links.classList.toggle("open");
+    });
+
+    document.querySelectorAll(".links a").forEach((link) => {
+      link.addEventListener("click", () => {
+        links.classList.remove("open");
+      });
+    });
+  </script>
+
+</body>
+</html>
